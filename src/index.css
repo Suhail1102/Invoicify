@@ -1,0 +1,72 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body{
+  font-family: "Roboto", serif;
+}
+*{
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+
+}
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+th, td {
+    border: 1px solid #ddd;
+    text-align: center;
+    padding: 8px;
+}
+th {
+    background-color: #f2f2f2;
+}
+
+.items-col{
+    width: 20rem;
+}
+.hsn-col{
+    width: 2rem;
+}
+ .bg-image{
+    background-image: url('./assets/bgimage.jpg');
+    background-position: center;
+    background-size: 100%;
+    background-repeat: no-repeat;
+ }
+
+ .fixed-size {
+    width: 794px; /* A4 width */
+    height: 1123px; /* A4 height */
+    overflow: hidden;
+    background-color: white;
+  }
+
+  @media print {
+    body * {
+      visibility: hidden;  /* Hide all elements */
+    }
+  
+    .print-container, .print-container * {
+      visibility: visible;  /* Show only the invoice */
+    }
+  
+    .print-container {
+      position: relative;
+      left: 0;
+      top: 0;
+      width: 100%;
+    }
+  }
+
+  .home-list .list:nth-child(even){
+ background-color: #f3dbff;
+
+  }
+  .home-list .list{ 
+    padding: 5px;
+    font-family: "Roboto", serif;
+    font-weight: 300;
+  }
