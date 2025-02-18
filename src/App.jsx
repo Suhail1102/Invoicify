@@ -25,7 +25,7 @@ const NotFoundPage = () => {
 
 function App() {
   const { user } = useContext(AuthContext);
-
+  console.log("New Deployment");
 
   return (
     <>
@@ -38,7 +38,7 @@ function App() {
             <Route path='/login' element={user ? <Navigate to="/" /> : <LoginPage />} />
             <Route path='/signup' element={<SignupPage />} />
             <Route path='/invoice/form' element={<PrivateRoute> <InvoicePage /></PrivateRoute>} />
-            <Route component={NotFoundPage} />
+            <Route path="*" component={NotFoundPage} />
 
             {/* <TaxInvoiceOutput  />   */}
           </Routes>
