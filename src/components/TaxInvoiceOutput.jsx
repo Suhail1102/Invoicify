@@ -84,11 +84,11 @@ const TaxInvoiceOutput = ({ formData }) => {
   };
   return (
     <>
-    <div className="md:flex flex-col lg:flex-row items-center justify-between w-full mx-auto max-w-[1100px]">
+    <div className="flex flex-col lg:flex-row items-center justify-between w-full mx-auto max-w-[1100px]">
       
  <div ref={componentRef} 
   className="border-[2px] border-slate-600 print-container
-            md:w-[8.27in] mx-auto md:h-[10.6in] w-[90vw] h-[85vh]
+            w-[8.27in] mx-auto h-[10.6in]
             mt-5 flex flex-col box-border 
              overflow-hidden mb-5 bg-white " style={{lineHeight:"0.5 !important"}}>
  {/* Tax Invoice heading */}
@@ -132,7 +132,7 @@ const TaxInvoiceOutput = ({ formData }) => {
                   <span className="block font-bold ">{formData.customerDetails.name} </span>
                   <span className="block">{formData.customerDetails.address} </span>
                   
-                  <span className=" ">GSTIN:27AAACT2727Q1ZW</span> &nbsp;|&nbsp;
+                  <span className=" ">GSTIN:{formData.customerDetails.gstin}</span> &nbsp;|&nbsp;
                   <span> Mobile:{formData.customerDetails.contact}</span>
                 </div>
                 
@@ -162,7 +162,7 @@ const TaxInvoiceOutput = ({ formData }) => {
                   <span className="block font-bold ">{formData.customerDetails.name} </span>
                   <span className="block">{formData.customerDetails.address} </span>
                  
-                  <span className=" ">GSTIN:27AAACT2727Q1ZW</span> &nbsp;|&nbsp;
+                  <span className=" ">GSTIN:{formData.customerDetails.gstin}</span> &nbsp;|&nbsp;
                   <span> Mobile:+91-{formData.customerDetails.contact}</span>
                 </div>
                     

@@ -183,6 +183,12 @@ function Header() {
               open={open}
               onClose={() => toggleDrawer(false)}
               anchor="right"
+              sx={{
+                "& .MuiDrawer-paper": {
+                  backgroundColor: "rgba(255, 255, 255, 0.8);", // Light transparent background
+                  backdropFilter: "blur(6px)", // Optional: Adds a blur effect
+                },
+              }}
             >
               <div
                 style={{ width: 235, padding: "16px", height: "100vh" ,  }}
@@ -194,11 +200,11 @@ function Header() {
                   <li className="text-black dark:text-white text-lg "><Link to="about" smooth={true} duration={500}  spy={true}   hashSpy={true} activeClass="text-purple-500 underline underline-offset-2"
                 className="hover:text-gray-300 transition duration-200 cursor-pointer"  onClick={() => toggleDrawer(false)}>About</Link></li>
                   <li className="text-black dark:text-white text-lg "><Link to="features" smooth={true} duration={500}  spy={true}   hashSpy={true} activeClass="text-purple-500 underline underline-offset-2"
-                className="hover:text-gray-300 transition duration-200 cursor-pointer">Features</Link></li>
+                className="hover:text-gray-300 transition duration-200 cursor-pointer" onClick={() => toggleDrawer(false)}>Features</Link></li>
                   <li className="text-black dark:text-white text-lg "><Link to="pricing" smooth={true} duration={500}  spy={true}   hashSpy={true} activeClass="text-purple-500 underline underline-offset-2"
-                className="hover:text-gray-300 transition duration-200 cursor-pointer">Pricing</Link></li>
+                className="hover:text-gray-300 transition duration-200 cursor-pointer" onClick={() => toggleDrawer(false)}>Pricing</Link></li>
                   <li className="text-black dark:text-white text-lg "><Link to="contact" smooth={true} duration={500}  spy={true}   hashSpy={true} activeClass="text-purple-500 underline underline-offset-2"
-                className="hover:text-gray-300 transition duration-200 cursor-pointer">Contact</Link></li>
+                className="hover:text-gray-300 transition duration-200 cursor-pointer" onClick={() => toggleDrawer(false)}>Contact</Link></li>
                   
                   <li>
                     {user ? (

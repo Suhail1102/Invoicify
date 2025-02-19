@@ -10,6 +10,7 @@ import InvoicePage from './Pages/InvoicePage';
 import { Navigate } from 'react-router-dom';
 import PrivateRoute from './Authentication/PrivateRoute';
 import { AuthContext } from './Authentication/AuthContext';
+import TaxInvoiceOutput from './components/TaxInvoiceOutput';
 
 
 const NotFoundPage = () => {
@@ -36,14 +37,13 @@ function App() {
             <Route path='/' element={<HomePage />} />
             <Route path='/login' element={user ? <Navigate to="/" /> : <LoginPage />} />
             <Route path='/signup' element={<SignupPage />} />
-            <Route path='/invoice/form' element={<PrivateRoute> <InvoicePage /></PrivateRoute>} />
+            <Route path='/invoice/form' element={ <InvoicePage />} />
             <Route path="*" component={NotFoundPage} />
-
+              
             {/* <TaxInvoiceOutput  />   */}
           </Routes>
         </div>
       </BrowserRouter>
-
     </>
   )
 }
