@@ -88,7 +88,7 @@ const TaxInvoiceOutput = ({ formData }) => {
       
  <div ref={componentRef} 
   className="border-[2px] border-slate-600 print-container
-            md:w-[8.27in] mx-auto md:h-[10.6in]
+            md:w-[8.27in] mx-auto md:h-[10.6in] w-[90vw] h-[85vh]
             mt-5 flex flex-col box-border 
              overflow-hidden mb-5 bg-white " style={{lineHeight:"0.5 !important"}}>
  {/* Tax Invoice heading */}
