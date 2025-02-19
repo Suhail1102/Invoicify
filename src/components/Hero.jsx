@@ -65,12 +65,12 @@ function Hero() {
       </div>
     </div>
   </div>
-  <div className='container flex mx-auto  justify-around box-border flex-wrap '>
+  <div className='container md:flex mx-auto  justify-around box-border flex-wrap '>
         {/* left column */}
       <div className=' flex-1 '>
       <h2 className='md:text-4xl md:my-4 my-2 md:px-7 px-5 text-2xl'>Get Paid Faster & Create Free Tax Invoices Online</h2>
       <div className='md:text-xl md:px-7 px-5 font-light text-base '>
-      As a seller (or vendor) trading taxable goods & services, locally and internationally getting paid on time & managing your taxes goes hand in hand. At FreeInvoiceBuilder, we have specifically contrived templates that match the tax requirements on sales and services of a wide range of countries. Use our tax invoice generator to create and send invoices with perfect tax details, formatting, and impressive design. <br/><br/>
+      As a seller (or vendor) trading taxable goods & services, locally and internationally getting paid on time & managing your taxes goes hand in hand. At Invoicify, we have specifically contrived templates that match the tax requirements on sales and services of a wide range of countries. Use our tax invoice generator to create and send invoices with perfect tax details, formatting, and impressive design. <br/><br/>
 
 Our free online tax generator is a ready-to-use software to conveniently generate tax invoices on mobile and desktop. All invoices and details are automatically saved in your account for easy reference, repeat invoicing, and accounting. So you can save your time processing tax invoices and invest more in servicing, and selling.
       </div>

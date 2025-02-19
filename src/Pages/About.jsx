@@ -21,7 +21,7 @@ function About() {
   <img className="lg:w-2/6 md:w-3/6 w-5/6 md:mb-10 mb-4 object-cover object-center rounded mx-auto" alt="hero" src={img3}/>
     <div className="w-full md:w-2/4 flex flex-col items-center text-left">
       <h1 className="title-font md:text-4xl text-xl md:mb-4 mb-2 font-medium text-gray-900 ">Simplifying Tax Invoicing for Your Business</h1>
-      <p className=" leading-loose">At tax invoice, we provide a user-friendly tax invoice generator designed to help businesses create professional, GST-compliant invoices in seconds. Our goal is to streamline your billing process, ensuring accuracy, compliance, and efficiency. Whether you're a freelancer, small business owner, or enterprise, our tool makes invoicing effortless and hassle-free. 🚀
+      <p className=" leading-loose">At Invoicify, we provide a user-friendly tax invoice generator designed to help businesses create professional, GST-compliant invoices in seconds. Our goal is to streamline your billing process, ensuring accuracy, compliance, and efficiency. Whether you're a freelancer, small business owner, or enterprise, our tool makes invoicing effortless and hassle-free. 🚀
 
 Let me know if you want any modifications! 😊</p>
     </div>

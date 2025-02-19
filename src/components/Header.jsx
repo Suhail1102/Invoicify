@@ -190,9 +190,9 @@ function Header() {
               >
                 <ul className="space-y-4 ">
                   <li className="text-black dark:text-white text-lg "><Link to="home" smooth={true} duration={500}  spy={true}   hashSpy={true} activeClass="text-purple-500 underline underline-offset-2"
-                className="hover:text-gray-300 transition duration-200 cursor-pointer">Home</Link></li>
+                className="hover:text-gray-300 transition duration-200 cursor-pointer"  onClick={() => toggleDrawer(false)}>Home</Link></li>
                   <li className="text-black dark:text-white text-lg "><Link to="about" smooth={true} duration={500}  spy={true}   hashSpy={true} activeClass="text-purple-500 underline underline-offset-2"
-                className="hover:text-gray-300 transition duration-200 cursor-pointer">About</Link></li>
+                className="hover:text-gray-300 transition duration-200 cursor-pointer"  onClick={() => toggleDrawer(false)}>About</Link></li>
                   <li className="text-black dark:text-white text-lg "><Link to="features" smooth={true} duration={500}  spy={true}   hashSpy={true} activeClass="text-purple-500 underline underline-offset-2"
                 className="hover:text-gray-300 transition duration-200 cursor-pointer">Features</Link></li>
                   <li className="text-black dark:text-white text-lg "><Link to="pricing" smooth={true} duration={500}  spy={true}   hashSpy={true} activeClass="text-purple-500 underline underline-offset-2"

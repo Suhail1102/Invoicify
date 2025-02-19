@@ -25,7 +25,6 @@ const NotFoundPage = () => {
 
 function App() {
   const { user } = useContext(AuthContext);
-  console.log("New Deployment");
 
   return (
     <>

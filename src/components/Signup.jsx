@@ -106,8 +106,7 @@ const apiUrl = import.meta.env.VITE_API_URL;
       }
       
     } catch (error) {
-      console.log(error)
-      alert(error)
+     setmessage(error)
       setLoading(false)
     }
    
@@ -115,12 +114,7 @@ const apiUrl = import.meta.env.VITE_API_URL;
 
   return (
     <>
-      <div className="flex min-h-screen items-center justify-center bg-image flex-col ">
-        {/* display message */}
-        
-        <div className="flex flex-col lg:flex-row w-full max-w-4xl bg-white shadow-lg rounded-2xl overflow-hidden relative ">
-          {/* Right Form Section */}
-          <div className="absolute md:top-5 md:left-80 left-20 ">{message &&<> <svg
+     <div className="absolute md:top-20 md:left-[45%] left-[28%] top-4">{message &&<> <svg
         xmlns="http://www.w3.org/2000/svg"
         fill="none"
         viewBox="0 0 24 24"
@@ -134,6 +128,12 @@ const apiUrl = import.meta.env.VITE_API_URL;
           d="M9 12.75 11.25 15 15 9.75M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"
         />
       </svg> <span className=" text-green-300 font-semibold text-lg transition-all">{message}</span> </>}</div>
+      <div className="flex min-h-screen items-center justify-center bg-image flex-col ">
+        {/* display message */}
+        
+        <div className="flex flex-col lg:flex-row w-full max-w-4xl bg-white shadow-lg rounded-2xl overflow-hidden relative ">
+          {/* Right Form Section */}
+         
           <div className="w-full lg:w-1/2 p-8 pt-5">
           <NavLink to="/" > <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1} stroke="currentColor" className="size-10 cursor-pointer">
   <path strokeLinecap="round" strokeLinejoin="round" d="m11.25 9-3 3m0 0 3 3m-3-3h7.5M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />

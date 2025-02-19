@@ -84,11 +84,11 @@ const TaxInvoiceOutput = ({ formData }) => {
   };
   return (
     <>
-    <div className="flex flex-col lg:flex-row items-center justify-between w-full mx-auto max-w-[1100px]">
+    <div className="md:flex flex-col lg:flex-row items-center justify-between w-full mx-auto max-w-[1100px]">
       
  <div ref={componentRef} 
   className="border-[2px] border-slate-600 print-container
-            w-[8.27in] mx-auto h-[10.6in]
+            md:w-[8.27in] mx-auto md:h-[10.6in]
             mt-5 flex flex-col box-border 
              overflow-hidden mb-5 bg-white " style={{lineHeight:"0.5 !important"}}>
  {/* Tax Invoice heading */}

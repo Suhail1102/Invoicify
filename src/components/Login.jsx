@@ -83,8 +83,7 @@ const handleSubmit = async (e) => {
  
   return (  
     <>
-    <div className="flex min-h-screen items-center justify-center bg-image">
-    <div className='absolute md:top-20 md:left-[44rem] left-20'>
+    <div className='absolute md:top-20 md:left-[45%] left-[28%] top-4'>
       {/* Render error alert if there is an error */}
       {error && (
         <Alert icon={<PriorityHighIcon fontSize="inherit" />} severity="error">
@@ -99,6 +98,8 @@ const handleSubmit = async (e) => {
         </Alert>
       )}
     </div>
+    <div className="flex min-h-screen items-center justify-center bg-image">
+    
     <div className="flex flex-col lg:flex-row w-full max-w-4xl bg-transparent shadow-lg rounded-2xl overflow-hidden">
       {/* Left Form Section */}
       <div className="w-full lg:w-1/2 p-8 bg-white">
