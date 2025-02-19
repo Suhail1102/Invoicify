@@ -11,7 +11,7 @@ import Avatar from '@mui/material/Avatar';
 import { deepPurple } from '@mui/material/colors';
 import Menu from '@mui/material/Menu';
 import MenuItem from '@mui/material/MenuItem';
-import invoiceLogo from '../assets/invoice logo.png'
+import invoiceLogo from '../assets/newLogo.png'
 
 
 
@@ -63,13 +63,12 @@ function Header() {
       <header
         className={` dark:text-white text-black sticky top-0 shadow-md transition-all z-10 dark:shadow-slate-800 backdrop-blur-sm sm:h-16 md:h-full`}
       >
-        <nav className="container mx-auto flex items-center justify-between py-4 md:px-6 px-2">
+        <nav className="container mx-auto flex items-center justify-between py-2 md:px-6 px-2">
           {/* Branding */}
           <Link
             to="/"
-            className="md:text-2xl font-bold hover:text-gray-200 text-lg cursor-pointer"
           >
-           <img src={invoiceLogo} alt="logo" className="w-5 h-5" />
+           <img src={invoiceLogo} alt="logo" className="md:w-40 object-contain w-28 " />
           </Link>
 
           {/* Mobile Menu Button */}
@@ -105,7 +104,7 @@ function Header() {
             <li>
               <Link
                 to="home" smooth={true} duration={500}  hashSpy={true} spy={true} activeClass="text-purple-500 underline underline-offset-2"
-                className="hover:text-gray-300 transition duration-200 cursor-pointer"
+                className="hover:text-gray-300 transition duration-200 cursor-pointer text-lg"
               >
                 Home
               </Link>
@@ -113,7 +112,7 @@ function Header() {
             <li>
               <Link
                 to="about" smooth={true} duration={500}  spy={true}   hashSpy={true} activeClass="text-purple-500 underline underline-offset-2" onSetActive={() => console.log("About section is now active")}
-                className="hover:text-gray-300 transition duration-200 cursor-pointer"
+                className="hover:text-gray-300 transition duration-200 cursor-pointer text-lg"
                 
               >
                 About
@@ -122,7 +121,7 @@ function Header() {
             <li>
               <Link
                 to="features" smooth={true} duration={500}  spy={true}   hashSpy={true} activeClass="text-purple-500 underline underline-offset-2"
-                className="hover:text-gray-300 transition duration-200 cursor-pointer"
+                className="hover:text-gray-300 transition duration-200 cursor-pointer text-lg"
                
               >
                 Features
@@ -131,7 +130,7 @@ function Header() {
             <li>
               <Link
                 to="pricing" smooth={true} duration={500}  spy={true}   hashSpy={true} activeClass="text-purple-500 underline underline-offset-2"
-                className="hover:text-gray-300 transition duration-200 cursor-pointer"
+                className="hover:text-gray-300 transition duration-200 cursor-pointer text-lg"
                 
               >
                 Pricing
@@ -140,7 +139,7 @@ function Header() {
             <li>
               <Link
                 to="contact" smooth={true} duration={500}  spy={true}   hashSpy={true} activeClass="text-purple-500 underline underline-offset-2"
-                className="hover:text-gray-300 transition duration-200 cursor-pointer"
+                className="hover:text-gray-300 transition duration-200 cursor-pointer text-lg"
                 
               >
                 Contact
@@ -173,7 +172,7 @@ function Header() {
                     ) : (
                       <a
                         href="/login"
-                        className=" dark:bg-zinc-700 dark:text-white  bg-gray-200 text-purple-600 px-4 py-2 rounded-full hover:bg-gray-100 transition duration-200"
+                        className=" dark:bg-zinc-700 dark:text-white  bg-gray-200 text-purple-600 px-4 py-2 rounded-full hover:bg-gray-100 transition duration-200 text-lg"
                         
                       >
                         Login

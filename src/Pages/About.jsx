@@ -40,58 +40,62 @@ Let me know if you want any modifications! 😊</p>
         </div>
       </section>
       <section className='container'>
-      <div className='md:w-[95vw] h-full  flex  justify-evenly items-center my-10 flex-wrap '>
-          <motion.img src={invoice} alt="" className='w-[18rem] h-[18rem]'  initial={{ opacity: 0, x:-50 }} // Start hidden & below
+      <div className='md:w-[95vw] h-full  md:flex  justify-evenly items-center my-10 flex-wrap '>
+          <motion.img src={invoice} alt="" className='w-[18rem] h-[18rem] mx-auto'  initial={{ opacity: 0, x:-50 }} // Start hidden & below
         whileInView={{ opacity: 1, x:0 }} // Animate when visible
         transition={{ duration: 1 }}
         viewport={{ once: false, amount: 0.2 }} />
-        <div className='mx-5 md:mx-0'>
+        <div className='mx-3 md:mx-0'>
           <h3 className='md:text-xl text-lg text-purple-600'>Primary Features</h3>
           <h2 className='md:text-2xl text-xl '>Sale, Purchase</h2>
-          <p className='md:w-[40rem] text-base md:text-left text-center'>Professionally Manage all your primary business functions like Sales/Invoicing, Purchases. Highly customizable business-owner friendly application that works seamlessly on mobile, web and cloud. All Ledgers are created automatically.</p>
+          <p className='md:w-[40rem] text-base text-left '>Professionally Manage all your primary business functions like Sales/Invoicing, Purchases. Highly customizable business-owner friendly application that works seamlessly on mobile, web and cloud. All Ledgers are created automatically.</p>
         </div>
         </div>
-        <div className='w-[95vw] h-full  flex  justify-evenly items-center my-10 flex-wrap'>
-          
-        <div>
-          <h3 className='text-2xl text-purple-600 text-right'>Payment Tracking</h3>
+
+        <div className='w-[95vw] h-full  md:flex flex-row-reverse justify-evenly items-center my-10 flex-wrap'>
+        <motion.img src={payment} alt="" className='w-[18rem] h-[18rem] mx-atuo'  initial={{ opacity: 0, x:50 }} // Start hidden & below
+        whileInView={{ opacity: 1, x:0 }} // Animate when visible
+        transition={{ duration: 1 }}
+        viewport={{ once: false, amount: 0.2 }} />
+        <div className='mx-3 md:mx-0'>
+          <h3 className='md:text-2xl text-purple-600 md:text-right text-left text-xl '>Payment Tracking</h3>
          
-          <p className='w-[40rem] text-base text-right'>Can record all sorts of complex payments such as partial payments, lumpsum payments, Advance payments, sales on Credit or Immediate payments. Track these invoice-wise or Customer wise. Keep your Cash/Bank balances up-to-date & Track Payables and receivables with ease.</p>
+          <p className='md:w-[40rem] text-base md:text-right text-left'>Can record all sorts of complex payments such as partial payments, lumpsum payments, Advance payments, sales on Credit or Immediate payments. Track these invoice-wise or Customer wise. Keep your Cash/Bank balances up-to-date & Track Payables and receivables with ease.</p>
         </div>
-        <motion.img src={payment} alt="" className='w-[18rem] h-[18rem]'  initial={{ opacity: 0, x:50 }} // Start hidden & below
-        whileInView={{ opacity: 1, x:0 }} // Animate when visible
-        transition={{ duration: 1 }}
-        viewport={{ once: false, amount: 0.2 }} />
-        </div>
-        <div className='w-[95vw] h-full  flex  justify-evenly items-center my-5 flex-wrap '>
-          <motion.img src={inventory} alt="" className='w-[18rem] h-[18rem]'  initial={{ opacity: 0, x:-50 }} // Start hidden & below
-        whileInView={{ opacity: 1, x:0 }} // Animate when visible
-        transition={{ duration: 1 }}
-        viewport={{ once: false, amount: 0.2 }} />
-        <div>
-          <h3 className='text-2xl text-purple-600'>Inventory Management</h3>
-          <p className='w-[40rem] text-base text-left'>Supports both FIFO and Average Cost Inventory methods. Reporting of product-wise Inventory Valuation and COGS(Cost of Goods Sold) values. Automatic inventory updates on Sale & Purchases Also features inventory reconciliation and Automatic Low Stock Alerts</p>
-        </div>
-        </div>
-        <div className='w-[95vw] h-full  flex  justify-evenly items-center my-5 flex-wrap'>
-        <div>
-          <h3 className='text-xl text-purple-600 text-right'>Order Management & Estimates</h3>
-          <p className='w-[40rem] text-base text-right'>Manage complete lifecycle of your Sales & Purchase processes. You can generate Estimates / Quotations and also keep track of Sales Orders received and Purchase Orders placed .Convert Orders and Estimates to invoices when they are confirmed. Keep track of fulfilled and pending orders.</p>
-        </div>
-          <motion.img src={order} alt="" className='w-[18rem] h-[18rem]'  initial={{ opacity: 0, x:50 }} // Start hidden & below
-        whileInView={{ opacity: 1, x:0 }} // Animate when visible
-        transition={{ duration: 1 }}
-        viewport={{ once: false, amount: 0.2 }} />
         
         </div>
-        <div className='w-[95vw] h-full  flex  justify-evenly items-center my-5 flex-wrap '>
-          <motion.img src={img2} alt="" className='w-[18rem] h-[18rem]'  initial={{ opacity: 0, x:-50 }} // Start hidden & below
+
+        <div className='w-[95vw] h-full  md:flex   justify-evenly items-center my-5 flex-wrap '>
+          <motion.img src={inventory} alt="" className='w-[18rem] h-[18rem] mx-auto'  initial={{ opacity: 0, x:-50 }} // Start hidden & below
         whileInView={{ opacity: 1, x:0 }} // Animate when visible
         transition={{ duration: 1 }}
         viewport={{ once: false, amount: 0.2 }} />
-        <div>
-          <h3 className='text-2xl text-purple-600'>Taxes and Discounts</h3>
-          <p className='w-[40rem] text-base text-left'>Standard / Customized taxes and discounts once set, as per company’s laws & benefits gets applied automatically.</p>
+        <div className='mx-3 md:mx-0'>
+          <h3 className='md:text-2xl text-purple-600 text-xl text-left'>Inventory Management</h3>
+          <p className='md:w-[40rem] text-base text-left'>Supports both FIFO and Average Cost Inventory methods. Reporting of product-wise Inventory Valuation and COGS(Cost of Goods Sold) values. Automatic inventory updates on Sale & Purchases Also features inventory reconciliation and Automatic Low Stock Alerts</p>
+        </div>
+        </div>
+
+        <div className='w-[95vw] h-full   md:flex flex-row-reverse  justify-evenly items-center my-5 flex-wrap'>
+        <motion.img src={order} alt="" className='w-[18rem] h-[18rem] mx-auto'  initial={{ opacity: 0, x:50 }} // Start hidden & below
+        whileInView={{ opacity: 1, x:0 }} // Animate when visible
+        transition={{ duration: 1 }}
+        viewport={{ once: false, amount: 0.2 }} />
+        <div className='mx-3 md:mx-0' >
+          <h3 className='md:text-2xl text-xl text-purple-600 md:text-right text-left'>Order Management & Estimates</h3>
+          <p className='md:w-[40rem] text-base md:text-right text-left'>Manage complete lifecycle of your Sales & Purchase processes. You can generate Estimates / Quotations and also keep track of Sales Orders received and Purchase Orders placed .Convert Orders and Estimates to invoices when they are confirmed. Keep track of fulfilled and pending orders.</p>
+        </div>
+        
+        </div>
+
+        <div className='w-[95vw] h-full  md:flex  justify-evenly items-center my-5 flex-wrap '>
+          <motion.img src={img2} alt="" className='w-[18rem] h-[18rem] mx-auto'  initial={{ opacity: 0, x:-50 }} // Start hidden & below
+        whileInView={{ opacity: 1, x:0 }} // Animate when visible
+        transition={{ duration: 1 }}
+        viewport={{ once: false, amount: 0.2 }} />
+        <div className='mx-3 md:mx-0'>
+          <h3 className='md:text-2xl text-xl text-left text-purple-600'>Taxes and Discounts</h3>
+          <p className='md:w-[40rem] text-base text-left'>Standard / Customized taxes and discounts once set, as per company’s laws & benefits gets applied automatically.</p>
         </div>
         </div>
       </section>
