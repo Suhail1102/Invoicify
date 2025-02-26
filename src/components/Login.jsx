@@ -36,7 +36,6 @@ const[showPassword , setShowPassword] = useState(false);
 const [open, setOpen] = React.useState(false);
 const handleSubmit = async (e) => {
   e.preventDefault();
-  setError('');
  setLoading(true)
   try {
     const response = await fetch(`${apiUrl}/api/login`, {
