@@ -4,7 +4,7 @@ import { NavLink , useNavigate} from 'react-router';
 import Backdrop from '@mui/material/Backdrop';
 import CircularProgress from '@mui/material/CircularProgress';
 import { Button } from "@mui/material";
-import { Eye , EyeOff} from 'lucide-react';
+import toast from "react-hot-toast";
 
 function Signup() {
   const [formData, setFormData] = useState({
@@ -22,7 +22,6 @@ function Signup() {
  
 const[open , setOpen]= useState(false)
 const [loading, setLoading] = useState(false)
-const [message, setmessage] = useState("")
 const apiUrl = import.meta.env.VITE_API_URL;
 
   const handleChange = (e) => {
@@ -67,12 +66,12 @@ const apiUrl = import.meta.env.VITE_API_URL;
 
 
     if (errors.password) {
-      alert("Please fix the password errors before submitting.");
+      toast.error("Please fix the password errors before submitting.")
       return;
     }
 
     if (formData.password !== formData.confirmPassword) {
-        alert("Passwords do not match!");
+        toast.error("Passwords do not match!");
   
       return;
     }
@@ -94,40 +93,24 @@ const apiUrl = import.meta.env.VITE_API_URL;
       });
       const result = await response.json();
       if (!response.ok) {
+        toast.error('something went wrong')
         throw new Error(`HTTP error! status: ${response.status}`);
-        setLoading(false)
+       
       }
       else {
-      setmessage(result.message)
+      toast.success(response.message)
       setLoading(false)
-      setTimeout(() => {
-        setmessage('')
-      }, 2000);
       }
       
     } catch (error) {
-     setmessage(error)
-      setLoading(false)
+     toast.error(error)
     }
    
   };
 
   return (
     <>
-     <div className="absolute md:top-20 md:left-[45%] left-[28%] top-4">{message &&<> <svg
-        xmlns="http://www.w3.org/2000/svg"
-        fill="none"
-        viewBox="0 0 24 24"
-        strokeWidth={1.5}
-        stroke="currentColor"
-        className="size-5 text-green-400 inline-block"
-      >
-        <path
-          strokeLinecap="round"
-          strokeLinejoin="round"
-          d="M9 12.75 11.25 15 15 9.75M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"
-        />
-      </svg> <span className=" text-green-300 font-semibold text-lg transition-all">{message}</span> </>}</div>
+   
       <div className="flex min-h-screen items-center justify-center bg-image flex-col ">
         {/* display message */}
         

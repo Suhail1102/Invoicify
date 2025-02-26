@@ -2,9 +2,6 @@ import React from 'react'
 import { useState, } from 'react';
 import heroimg from '../assets/heroimg.png'
 import { NavLink, useNavigate , useLocation} from 'react-router-dom';
-import Alert from '@mui/material/Alert';
-import CheckIcon from '@mui/icons-material/Check';
-import PriorityHighIcon from '@mui/icons-material/PriorityHigh';
 import Backdrop from '@mui/material/Backdrop';
 import CircularProgress from '@mui/material/CircularProgress';
 import { Button } from "@mui/material";
@@ -21,8 +18,6 @@ function Login() {
       password:""
     }
   );
-  const [error, setError] = useState('');
-  const [message, setMessage] = useState('');
   const navigate = useNavigate();
   const location = useLocation();
   const [loading, setLoading]= useState(false);
@@ -53,6 +48,7 @@ const handleSubmit = async (e) => {
 
     const data = await response.json();
     if (!response.ok) {
+      toast.error(data.message)
       throw new Error(data.message || 'Login failed');
       
     }
@@ -63,7 +59,6 @@ const handleSubmit = async (e) => {
     console.log("Redirect Path:", location.state?.from?.pathname); 
       
     const redirectPath = location.state?.from?.pathname || "/";
-      // setMessage(data.message)
       toast.success(data.message)
       setOpen(true)
     setTimeout(() => {
@@ -76,32 +71,12 @@ const handleSubmit = async (e) => {
 
   } catch (error) {
     toast.error(error.message)
-    // setError(error.message);
-    setTimeout(() => {
-      // setError('');
-    }, 2000);
-    setLoading(false)
   }
 };
 
  
   return (  
     <>
-    {/* <div className='absolute md:top-20 md:left-[45%] left-[28%] top-4'>
-      
-      {error && (
-        <Alert icon={<PriorityHighIcon fontSize="inherit" />} severity="error">
-          {error}
-        </Alert>
-      )}
-
-    
-      {message && !error && (
-        <Alert icon={<CheckIcon fontSize="inherit" />} severity="success">
-          {message}
-        </Alert>
-      )}
-    </div> */}
     <div className="flex min-h-screen items-center justify-center bg-image">
     
     <div className="flex flex-col lg:flex-row w-full max-w-4xl bg-transparent shadow-lg rounded-2xl overflow-hidden">

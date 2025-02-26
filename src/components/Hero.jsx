@@ -4,11 +4,10 @@ import img1 from '../assets/img1.jpg'
 import { motion } from "framer-motion";
 import { useContext } from "react";
 import { AuthContext } from "../Authentication/AuthContext";
-import { Snackbar } from '@mui/material';
+import toast from 'react-hot-toast';
 
 function Hero() {
   const { user} = useContext(AuthContext);
-  const [alert, setAlert]= useState(false);
 
   const handleNavigation = (e) => {
     if (!user) {
@@ -18,30 +17,17 @@ function Hero() {
   };
 
   const handleAlert=()=>{
-    setAlert(true);
+
+    toast.error('you have to login')
   
     console.log("alert is true")
      setTimeout(() => {
-      setAlert(false);
       console.log("alert is false")
       window.location.href = "/invoice/form";
      }, 2000);
   }
   return (
     <>
-   <Snackbar
-  anchorOrigin={{ vertical: "top", horizontal: "center" }}
-  open={alert}
-  message="!You have to login"
-  sx={{
-    "& .MuiSnackbarContent-root": {
-      backgroundColor: "white",
-      border:"none", // Change background color
-      color: "red", // Change text color
-      fontSize: "16px", // Adjust font size if needed
-    },
-  }}
-/>
     <section className=" dark:bg-zinc-900 dark:text-white text-gray-600 body-font transition-all">
   <div className="container mx-auto flex px-5 py-24 md:flex-row flex-col items-center">
     <div className="lg:max-w-lg lg:w-full md:w-1/2 w-5/6 mb-10 md:mb-0">

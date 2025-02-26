@@ -8,7 +8,7 @@ import InvoicePage from './Pages/InvoicePage';
 import { Navigate } from 'react-router-dom';
 import PrivateRoute from './Authentication/PrivateRoute';
 import { AuthContext } from './Authentication/AuthContext';
-
+import { Toaster } from "react-hot-toast"
 
 
 const NotFoundPage = () => {
@@ -29,8 +29,9 @@ function App() {
     <>
 
       <BrowserRouter>
-
+        
         <div className='dark:bg-zinc-900 dark:text-white transition-all'>
+        <Toaster />
           <Routes>
             <Route path='/' element={<HomePage />} />
             <Route path='/login' element={user ? <Navigate to="/" /> : <LoginPage />} />
