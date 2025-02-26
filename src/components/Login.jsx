@@ -47,7 +47,6 @@ const handleSubmit = async (e) => {
 
     const data = await response.json();
     if (!response.ok) {
-      toast.error(data.message)
       throw new Error(data.message || 'Login failed');
       
     }
@@ -70,6 +69,7 @@ const handleSubmit = async (e) => {
 
   } catch (error) {
     toast.error(error.message)
+    setLoading(false)
   }
 };
 
