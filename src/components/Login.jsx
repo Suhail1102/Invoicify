@@ -9,6 +9,7 @@ import Backdrop from '@mui/material/Backdrop';
 import CircularProgress from '@mui/material/CircularProgress';
 import { Button } from "@mui/material";
 import { Eye , EyeOff} from 'lucide-react';
+import toast from "react-hot-toast"
 
 
 function Login() {
@@ -53,6 +54,7 @@ const handleSubmit = async (e) => {
     const data = await response.json();
     if (!response.ok) {
       throw new Error(data.message || 'Login failed');
+      
     }
 
     localStorage.setItem('token', data.token);
@@ -61,7 +63,8 @@ const handleSubmit = async (e) => {
     console.log("Redirect Path:", location.state?.from?.pathname); 
       
     const redirectPath = location.state?.from?.pathname || "/";
-      setMessage(data.message)
+      // setMessage(data.message)
+      toast.success(data.message)
       setOpen(true)
     setTimeout(() => {
       navigate(redirectPath, { replace: true });
@@ -72,9 +75,10 @@ const handleSubmit = async (e) => {
     setLoading(false)
 
   } catch (error) {
-    setError(error.message);
+    toast.error(error.message)
+    // setError(error.message);
     setTimeout(() => {
-      setError('');
+      // setError('');
     }, 2000);
     setLoading(false)
   }
@@ -83,21 +87,21 @@ const handleSubmit = async (e) => {
  
   return (  
     <>
-    <div className='absolute md:top-20 md:left-[45%] left-[28%] top-4'>
-      {/* Render error alert if there is an error */}
+    {/* <div className='absolute md:top-20 md:left-[45%] left-[28%] top-4'>
+      
       {error && (
         <Alert icon={<PriorityHighIcon fontSize="inherit" />} severity="error">
           {error}
         </Alert>
       )}
 
-      {/* Render success alert if there is a message */}
+    
       {message && !error && (
         <Alert icon={<CheckIcon fontSize="inherit" />} severity="success">
           {message}
         </Alert>
       )}
-    </div>
+    </div> */}
     <div className="flex min-h-screen items-center justify-center bg-image">
     
     <div className="flex flex-col lg:flex-row w-full max-w-4xl bg-transparent shadow-lg rounded-2xl overflow-hidden">
